@@ -3,8 +3,8 @@ const container = document.querySelector(".container");
 const allDivs = container.querySelectorAll("div");
 let arrayBtnResponse = { 
     newBtn: 0,
-    blackBtn: "n",
-    colorBtn: "y",
+    blackBtn: "y",
+    colorBtn: "n",
 };
 
 // sets color palette to black/monochromatic
@@ -79,7 +79,7 @@ function resetCanvas() {
 // prompts user for grid width/height and checks to see if a grid is already in place
 function getCanvasSize() {
     if (arrayBtnResponse.newBtn < 10 || arrayBtnResponse.newBtn > 100) {
-        let userResponse = prompt("Please enter a square width between 10 and 100:", "");
+        let userResponse = prompt("Please enter a pixel width and height between 10 and 100:", "");
         let userNum = parseInt(userResponse);
         arrayBtnResponse.newBtn = userNum;
         if (userNum > 100 || userNum < 10) { 
